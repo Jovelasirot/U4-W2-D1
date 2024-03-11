@@ -8,7 +8,7 @@ public class OnLineBalance extends BankAccount {
         this.maxWithdraw = maxWithdraw;
     }
 
-    void printFunds() {
+    void printBalance() {
         System.out.println("Owner: " + owner + " - Funds: " + balance + " - Max movements: " + maxMovements + " - Max withdraw possible: " + maxWithdraw);
     }
 

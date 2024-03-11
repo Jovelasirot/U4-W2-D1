@@ -9,6 +9,7 @@ public class BankAccount {
     public BankAccount(String owner, double balance) {
         this.owner = owner;
         this.balance = balance;
+        nMovements = 0;
     }
 
     void withdraw(double x) throws BankException {
