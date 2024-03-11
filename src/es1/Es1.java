@@ -40,6 +40,8 @@ public class Es1 {
             }
 
         } while (number != 0);
+
+        scanner.close();
     }
 
     private static void printArray(int[] arr) {
