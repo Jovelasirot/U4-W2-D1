@@ -20,8 +20,7 @@ public class Bank {
             System.out.println("Balance: " + account1.getBalance());
 
         } catch (BankException e) {
-            logger.error("Not enough funds");
-            System.out.println("Error:" + e);
+            logger.error("Error while withdrawing: " + e);
             e.printStackTrace();
 
         }
@@ -35,7 +34,7 @@ public class Bank {
             account2.withdraw(2000);
             account2.printBalance();
         } catch (BankException e) {
-            System.out.println("Error: " + e);
+            logger.error("Error while withdrawing: " + e);
             e.printStackTrace();
         }
 

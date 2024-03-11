@@ -28,8 +28,7 @@ public class Es2 {
             System.out.println("Efficiency: " + efficiency + " km/l");
 
         } catch (IllegalAccessException ex) {
-            System.out.println("Error: " + ex.getMessage());
-            logger.error("Gas consumed can't be less than/or zero innit");
+            logger.error("Error: " + ex);
         } finally {
             scanner.close();
         }

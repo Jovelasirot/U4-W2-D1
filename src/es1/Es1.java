@@ -41,8 +41,7 @@ public class Es1 {
                     numArray[position - 1] = number;
                     printArray(numArray);
                 } catch (ArrayIndexOutOfBoundsException ex) {
-                    System.out.println("Error: " + ex.getMessage());
-                    logger.error("Invalid position innit.");
+                    logger.error("Error: " + ex);
                 }
             }
 
