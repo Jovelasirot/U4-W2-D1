@@ -39,7 +39,7 @@ public class Es1 {
                         throw new ArrayIndexOutOfBoundsException("Invalid position");
                     }
                     numArray[position - 1] = number;
-                    printArray(numArray);
+                    logger.info(Arrays.toString(numArray));
                 } catch (ArrayIndexOutOfBoundsException ex) {
                     logger.error("Error: " + ex);
                 }

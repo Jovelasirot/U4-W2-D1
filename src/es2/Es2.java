@@ -22,12 +22,12 @@ public class Es2 {
             double liters = scanner.nextDouble();
 
             if (liters <= 0) {
-                throw new IllegalAccessException("Gas consumed can't be less than/or zero.");
+                throw new ArithmeticException("Gas consumed can't be less than/or zero.");
             }
             double efficiency = km / liters;
             System.out.println("Efficiency: " + efficiency + " km/l");
 
-        } catch (IllegalAccessException ex) {
+        } catch (ArithmeticException ex) {
             logger.error("Error: " + ex);
         } finally {
             scanner.close();
