@@ -1,9 +1,16 @@
 package es2;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Scanner;
 
 public class Es2 {
+
+    private static final Logger logger = LoggerFactory.getLogger(Es2.class);
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
 
@@ -22,6 +29,7 @@ public class Es2 {
 
         } catch (IllegalAccessException ex) {
             System.out.println("Error: " + ex.getMessage());
+            logger.error("Gas consumed can't be less than/or zero innit");
         } finally {
             scanner.close();
         }

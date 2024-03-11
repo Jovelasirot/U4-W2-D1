@@ -1,11 +1,18 @@
 package es1;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Es1 {
+
+    private static final Logger logger = LoggerFactory.getLogger(Es1.class);
+
     public static void main(String[] args) {
+
 
         Random rnd = new Random();
         int[] numArray = new int[5];
@@ -17,7 +24,6 @@ public class Es1 {
         System.out.println(Arrays.toString(numArray));
 
         Scanner scanner = new Scanner(System.in);
-
 
         int number;
         do {
@@ -36,10 +42,12 @@ public class Es1 {
                     printArray(numArray);
                 } catch (ArrayIndexOutOfBoundsException ex) {
                     System.out.println("Error: " + ex.getMessage());
+                    logger.error("Invalid position innit.");
                 }
             }
 
         } while (number != 0);
+
 
         scanner.close();
     }
